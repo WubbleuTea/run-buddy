@@ -104,6 +104,8 @@ section {
     padding: 20px;
     color: #024e76;
     border: solid 3px #024e76;
+    width: 40%0;
+    margin: 3.5%;
 }
 
 .hero h3 {
@@ -142,10 +144,11 @@ button {
 .section-title {
     font-size: 55px;
     color: #024e76;
-    margin-bottom: 35px;
-    padding: 0 100px 20px 100px;
-    display: inline-block;
     border-bottom: 3px solid;
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto 35px auto;
+    width: 50%;
 }
 
 .primary-border {
@@ -156,20 +159,16 @@ button {
     border-color: #39a6b2;
 }
 
-.intro {
-    text-align: center;
-}
-
 .intro p {
     line-height: 1.7;
     color: #39a6b2;
     width: 80%;
     font-size: 20px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .steps {
-    text-align: center;
     background: #fce138
 }
 
@@ -198,7 +197,7 @@ button {
 }
 
 .trainers {
-    text-align: center;
+
 }
 
 .trainer {
@@ -246,7 +245,6 @@ button {
 
 /* REACH OUT STYLE START */
 .contact {
-    text-align: center;
     background: #024e76;
 }
 
@@ -285,3 +283,7 @@ button {
 }
 
 /* REACH OUT STYLES END */
+
+.flex-row {
+    display: flex;
+}
