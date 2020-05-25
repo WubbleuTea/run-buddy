@@ -12,3 +12,5 @@ https://joshuaweisbrodtorres.github.io/run-buddy/
 
 ## Contribution
 Made with ❤️ by Joshua Weisbrod-Torres
+
+# Run Buddy, Inc
