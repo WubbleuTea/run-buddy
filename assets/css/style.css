@@ -156,6 +156,7 @@ section {
     display: block;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.75);
+    width: 100%;
 }
 
 .form-input:focus {
@@ -335,15 +336,41 @@ section {
 }
 
 .trainer {
-    margin: 0 auto 30px auto;
+    margin: 20px;
     background: var(--secondary-color);
     color: var(--primary-color);
-    margin: 20px;
     flex: 1;
 }
 
-.trainer img {
+.trainer:hover .trainer-img::after {
+    opacity: 1;
+}
+
+.trainer:hover .trainer-img h3, .trainer:hover .trainer-img h4 {
+    top: 0px;
+}
+
+.trainer-img {
     width: 100%;
+    min-height: 300px;
+    background-size: cover;
+    display: flex;
+    padding: 15px;
+    align-items: flex-end;
+    position: relative;
+    overflow: hidden;
+}
+
+.trainer-img::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(252, 225, 56, .3), var(--secondary-color));
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: .5s;
 }
 
 .trainer-bio {
@@ -351,26 +378,51 @@ section {
     line-height: 1.3;
 }
 
-.text-left {
-    text-align: left;
+.trainer-img h3 {
+    font-size: 28px;
+    position: relative;
+    z-index: 9998;
+    margin-bottom: 5px;
+    top: 200px;
+    transition: .6s;
 }
 
-.text-right {
-    text-align: right;
+.trainer-img h4 {
+    font-weight: lighter;
+    font-size: 22px;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 9998;
+    top: 200px;
+    transition: .6s;
+}
+
+.trainer-bio p {
+    font-size: 17px;
 }
 
 .trainer-bio h3 {
     font-size: 28px;
+    display: none;
 }
 
 .trainer-bio h4 {
     font-weight: lighter;
     font-size: 22px;
     margin-bottom: 15px;
+    display: none;
 }
 
-.trainer-bio p {
-    font-size: 17px;
+.trainer-1 {
+    background-image: url(../images/trainer-1.jpg);
+}
+
+.trainer-2 {
+    background-image: url(../images/trainer-2.jpg);
+}
+
+.trainer-3 {
+    background-image: url(../images/trainer-3.jpg);
 }
 
 /* SERVICE STYLES BEGIN */
@@ -507,6 +559,7 @@ section {
     display: flex;
 }
 
+
 /* MEDIA QUERY FOR SMALLER DESKTOP SCREES AND SMALLER */
 @media screen and (max-width: 980px) {
     header {
@@ -547,8 +600,16 @@ section {
         width: 80%;
     }
 
-    .trainer {
+    .trainers {
         flex: 0 70%;
+    }
+
+    .trainer-img h3, .trainer-img h4, .trainer-img::after {
+        display: none;
+    }
+    
+    .trainer-bio h3, .trainer-bio h4 {
+        display: inline;
     }
 
     .contact-info iframe {
